@@ -1,0 +1,102 @@
+*
+{
+   margin: 0;
+   padding: 0;
+   scroll-behavior: smooth;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+section{
+   padding: 50px 10%;
+}
+body
+{
+   background: hsla(40, 100%, 87%, 1);
+
+   background: linear-gradient(180deg, hsla(40, 100%, 87%, 1) 0%, hsla(60, 100%, 89%, 1) 100%);
+
+   background: -moz-linear-gradient(180deg, hsla(40, 100%, 87%, 1) 0%, hsla(60, 100%, 89%, 1) 100%);
+
+   background: -webkit-linear-gradient(180deg, hsla(40, 100%, 87%, 1) 0%, hsla(60, 100%, 89%, 1) 100%);
+
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFE9BC", endColorstr="#FFFFC5", GradientType=1 );
+   
+   min-height: 100vh;
+}
+header
+{
+   padding: 0 10%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 1000; 
+}
+header ul
+{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+header ul li
+{
+   list-style: none;
+   margin-left: 20px;
+}
+
+header ul li a
+{
+   font-size: 1rem;
+   text-decoration: none;
+   padding: 8px 15px;
+   transition: all 0.15s ease;
+   border-radius: 10px;
+   color: black;
+   font-weight: 500;
+}
+
+header ul li a:hover{
+   background-color: #FBD07C;
+}
+
+header a img
+{
+   height: 65px; 
+}
+#menu-icon{
+   font-size: 24px;
+   cursor: pointer;
+   display: none;
+   z-index: 10001;
+}
+
+.home{
+   position: relative;
+   width: 100%;
+   min-height: 100vh;
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(17rem, 1fr));
+   align-items: center;
+   gap: 1.5rem;
+}
+
+.home-text span{
+   font-size: 1.4rem;
+   font-weight: 600;
+}
+.home-text h1{
+   font-size: 3.4rem;
+   color: #FACC38;
+}
+.home-text h2{
+   font-size: 1.4rem;
+   font-weight: bolder;
+}
+.home-text p{
+   font-weight: 400;
+   margin: 0.7rem 0 1rem;
+}
