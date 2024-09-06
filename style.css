@@ -1,25 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.rubik-font {
+   font-family: "Rubik", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+ }
 *
 {
    margin: 0;
    padding: 0;
    scroll-behavior: smooth;
    box-sizing: border-box;
-   font-family: 'Poppins', sans-serif;
+   font-family: "Rubik", sans-serif;
+   text-decoration: none;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root{
+   --bg-color: #fab01a;
 }
 section{
    padding: 50px 10%;
 }
 body
 {
-   background: hsla(40, 100%, 87%, 1);
+   background: hsla(40, 79%, 87%, 1);
 
-   background: linear-gradient(180deg, hsla(40, 100%, 87%, 1) 0%, hsla(60, 100%, 89%, 1) 100%);
+background: linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
 
-   background: -moz-linear-gradient(180deg, hsla(40, 100%, 87%, 1) 0%, hsla(60, 100%, 89%, 1) 100%);
+background: -moz-linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
 
-   background: -webkit-linear-gradient(180deg, hsla(40, 100%, 87%, 1) 0%, hsla(60, 100%, 89%, 1) 100%);
+background: -webkit-linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
 
-   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFE9BC", endColorstr="#FFFFC5", GradientType=1 );
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f8e7c4", endColorstr="#fcb62a", GradientType=1 );
    
    min-height: 100vh;
 }
@@ -60,7 +76,8 @@ header ul li a
 }
 
 header ul li a:hover{
-   background-color: #FBD07C;
+   background-color: black;
+   color: white;
 }
 
 header a img
@@ -75,28 +92,184 @@ header a img
 }
 
 .home{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    position: relative;
    width: 100%;
    min-height: 100vh;
-   display: grid;
-   grid-template-columns: repeat(auto-fit,minmax(17rem, 1fr));
    align-items: center;
-   gap: 1.5rem;
+   overflow: hidden;
 }
-
-.home-text span{
-   font-size: 1.4rem;
-   font-weight: 600;
-}
+.home-text{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   text-align: center;
+   margin-bottom: 3rem;
+} 
 .home-text h1{
    font-size: 3.4rem;
-   color: #FACC38;
+   color:#000000;
 }
 .home-text h2{
-   font-size: 1.4rem;
+   font-size: 1.6rem;
    font-weight: bolder;
 }
 .home-text p{
    font-weight: 400;
    margin: 0.7rem 0 1rem;
 }
+.home-text span{
+   position: relative;
+   overflow: hidden;
+   display: block;
+   line-height: 1.2;
+}
+.home-text span::after{
+   content: '';
+   position:absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: var(--bg-color);
+   animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+.home-text span::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   background: rgb(255, 204, 101);
+   animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+   transform: translateX(0);
+}
+.home-text span:nth-of-type(1)::before,
+.home-text span:nth-of-type(1)::after{
+    animation-delay: 1s;
+}
+
+.home-text span:nth-of-type(2)::before,
+.home-text span:nth-of-type(2)::after{
+    animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+.icon-grid{
+   position: absolute;
+   display: grid;
+   grid-template-columns: repeat(13, 1fr);
+   grid-template-rows: repeat(13,1fr);
+   gap: 20px;
+   width: 100vw;
+   height:100vh;
+   z-index: -1;
+}
+.icon-grid .bx{
+   overflow: visible;
+   font-size: 5rem;
+   color: #fcb62a;
+   opacity: 0.3;
+   transform: rotate(50deg);
+}
+.btn{
+   display: inline-block;
+   background: black;
+   padding: 0.8rem 2rem;
+   color: #fff;
+   font-weight: 500;
+
+}
+.btn:hover{
+   background: #fff;
+   color: black;
+   letter-spacing: 2px;
+   transition: 0.2s;
+}
+
+.contact-icons{
+   position: absolute;
+   bottom: 1rem;
+   right: 1rem;
+}
+
+.contact-icons .button {
+   display: inline-block;
+   height: 60px;
+   width: 60px;
+   float: left;
+   text-decoration: none;
+   margin: 0 5px;
+   overflow: hidden;
+   background: #fff;
+   border-radius: 50px;
+   cursor: pointer;
+   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+   transition: all 0.3s ease-out;
+}
+
+.contact-icons .button:hover{
+   width: 200px;
+}
+
+.contact-icons .button .icon{
+   display: inline-block;
+   height: 60px;
+   width: 60px;
+   color: #000;
+   text-align: center;
+   border-radius: 50px;
+   box-sizing: border-box;
+   line-height: 60px;
+   transition: all 0.3s ease-out;
+}
+
+.contact-icons .button:nth-child(1):hover .icon {
+   background: #4267B2;
+ }
+ .contact-icons .button:nth-child(2):hover .icon {
+   background: #E1306C;
+ }
+ .contact-icons .button:nth-child(3):hover .icon {
+   background: #333;
+ }
+
+.contact-icons .button .icon i {
+   font-size: 25px;
+   line-height: 60px;
+   transition: all 0.3s ease-out;
+}
+.contact-icons .button:hover .icon i{
+   color: #fff;
+}
+.wrapper .button span {
+   font-size: 20px;
+   font-weight: 500;
+   line-height: 60px;
+   margin-left: 10px;
+   transition: all 0.3s ease-out;
+}
+
+.contact-icons .button:nth-child(1) span {
+   color: #4267B2;
+ }
+ .contact-icons .button:nth-child(2) span {
+   color: #E1306C;
+ }
+ .contact-icons .button:nth-child(4) span {
+   color: #333;
+ }
+
+ 
