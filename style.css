@@ -25,20 +25,6 @@
 section{
    padding: 50px 10%;
 }
-body
-{
-   background: hsla(40, 79%, 87%, 1);
-
-background: linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
-
-background: -moz-linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
-
-background: -webkit-linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f8e7c4", endColorstr="#fcb62a", GradientType=1 );
-   
-   min-height: 100vh;
-}
 header
 {
    padding: 0 10%;
@@ -90,8 +76,19 @@ header a img
    display: none;
    z-index: 10001;
 }
+body{
+   background: hsla(40, 79%, 87%, 1);
 
+   background: linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
+
+   background: -moz-linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
+
+   background: -webkit-linear-gradient(0deg, hsla(40, 79%, 87%, 1) 0%, hsla(40, 97%, 58%, 1) 100%);
+
+   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#f8e7c4", endColorstr="#fcb62a", GradientType=1 );
+}
 .home{
+
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -99,7 +96,7 @@ header a img
    width: 100%;
    min-height: 100vh;
    align-items: center;
-   overflow: hidden;
+   overflow: hidden
 }
 .home-text{
    display: flex;
@@ -168,14 +165,16 @@ header a img
     100% {transform: translateX(200%)}
 }
 .icon-grid{
+   top: 0;
+   left: 0;
    position: absolute;
    display: grid;
    grid-template-columns: repeat(13, 1fr);
-   grid-template-rows: repeat(13,1fr);
+   grid-template-rows: repeat(auto-fill,1fr);
    gap: 20px;
    width: 100vw;
    height:100vh;
-   z-index: -1;
+   z-index: 0;
 }
 .icon-grid .bx{
    overflow: visible;
@@ -190,7 +189,6 @@ header a img
    padding: 0.8rem 2rem;
    color: #fff;
    font-weight: 500;
-
 }
 .btn:hover{
    background: #fff;
@@ -270,6 +268,46 @@ header a img
  }
  .contact-icons .button:nth-child(4) span {
    color: #333;
+ }
+
+ .about{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   background-color: #fff;
+   min-height: 100vh;
+ }
+
+ .about h1{
+   width: 100%;
+   padding: 5% 0 10%;
+   text-align: center;
+   font-weight: 500;
+   font-size: 3.4rem;
+ }
+.about-content{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+ .about-text{
+   position: sticky;
+   top: 170px;
+   align-self: flex-start;
+   padding-right: 20px;
+ }
+
+.img-about{
+   display: flex;
+   flex-direction: column;
+}
+
+ .img-about img{
+   width: 100%;
+   max-width: 700px;
+   height: auto;
+   margin-bottom: 4rem;
  }
 
  
