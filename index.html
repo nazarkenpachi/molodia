@@ -24,7 +24,7 @@
    </header>
    <!-- Home -->
    <section class="home" id="home">
-      <div class="icon-grid" id="icon-grid-home"></div>
+      <div class="icon-grid"></div>
       <div class="text-container">
          <div class="home-text">
             <h1><span>Ласкаво просимо!</span></h1>
@@ -54,16 +54,18 @@
          </a>
       </div>
    </section>
+   <div class="spacer layer1"></div>
    <!--About-->
+
    <section class="about" id="about">
-      <div class="icon-grid" id="icon-grid-about"></div>
       <h1>Про нас</h1>
       <div class="about-content">
          <div class="about-text">
             <h2>Заснування</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing <br>elit. Molestiae, modi. Nihil nemo quam omnis vitae?</p>
+            <p>"МолоДія" була заснована у липні, під час проведення всеукраїнського обміну молоддю "ВідНОВА:UA". Над приміщенням, де зараз знаходиться молодіжний центр трудилась молодь з усієї України. Була проведена колосальна робота і приміщення зараз просто не впізнати.</p>
             <h2>Теперішня діяльність</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur<br>eaque hic quod a quia exercitationem aperiam rerum dolore similique! Ipsam.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus unde, animi cupiditate expedita repudiandae doloribus enim tenetur amet facilis vero, libero veniam dignissimos perspiciatis, esse fugit consectetur ut assumenda facere?</p>
+            <a href="#" class="btn">Далі</a>
          </div>
          <div class="img-about">
             <img src="about-1.jpg" alt ="">
@@ -71,6 +73,92 @@
          </div> 
       </div>
    </section>
+   <section class="before-after">
+      <h1>Результат До / Після</h1>
+      <div class="container">
+        <div class="image-container">
+          <img
+            class="image-before slider-image"
+           src="before-img.jpg"
+            alt="color photo"
+          />
+          <img
+            class="image-after slider-image"
+            src="after-img.jpg"
+            alt="black and white"
+          />
+        </div>
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Percentage of before photo shown"
+          class="slider"
+        />
+        <div class="slider-line" aria-hidden="true"></div>
+        <div class="slider-button" aria-hidden="true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="128"
+              y1="40"
+              x2="128"
+              y2="216"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="96"
+              y1="128"
+              x2="16"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="48 160 16 128 48 96"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+            <line
+              x1="160"
+              y1="128"
+              x2="240"
+              y2="128"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <polyline
+              points="208 96 240 128 208 160"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></polyline>
+          </svg>
+        </div>
+      </div>
+    </section>
    <script src="main.js"></script>
 </body>
 </html>
