@@ -80,7 +80,7 @@ body{
    transition: background-color 1s ease;
 }
 .home{
-   background-color: #ffc300;
+   background-image: radial-gradient(circle, #ffebaa, #ffe28a, #ffd868, #ffce43, #ffc300);
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -327,7 +327,7 @@ body{
  }
 
  .layer1{
-   background-image: url(layer1.svg);
+   background-image: url(layer2.svg);
  }
 
  
@@ -339,9 +339,15 @@ body{
    width: 100%;
  }
  .before-after {
+   position: relative;
    display: grid;
    place-items: center;
    min-height: 100vh;
+   background-color: #ffc300;
+   /* background-image: linear-gradient(to right bottom, #f9d357, #facf48, #fccb38, #fdc725, #ffc300); */
+ }
+
+ .before-after h1{
  }
  
  .container {
@@ -370,7 +376,6 @@ body{
    position: absolute;
    inset: 0;
    width: var(--position);
-   filter: grayscale(100%)
  }
  
  .slider {
@@ -415,3 +420,4 @@ body{
    /* z-index: 100; */
    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
  }
+

@@ -17,7 +17,11 @@ const sr = ScrollReveal ({
    reset: true
 })
 
-// const colors = ['#ffc300', '#f8f8f8'];
+// const backgroundColors = [
+//    'radial-gradient(circle, #ffebaa, #ffe28a, #ffd868, #ffce43, #ffc300)', 
+//    '#fff',
+//    'linear-gradient(to left top, #ffffff, #cacaca, #979797, #676767, #3b3b3b)'
+//    ];
 // let currentColorIndex = 0;
 
 // function updateBackgroundColor() {
@@ -26,9 +30,14 @@ const sr = ScrollReveal ({
 //    const bodyHeight = document.body.offsetHeight;
    
 //    const scrollPercentage = scrollPosition / (bodyHeight - windowHeight);
-//    const colorIndex = Math.floor(scrollPercentage * colors.length);
-   
-//    document.body.style.backgroundColor = colors[colorIndex];
+//    const colorIndex = Math.floor(scrollPercentage * backgroundColors.length);
+
+//    if (backgroundColors[colorIndex] === '#fff'){
+//       document.body.style.backgroundColor = backgroundColors[colorIndex];
+//    }
+//    else {
+//       document.body.style.background = backgroundColors[colorIndex];
+//    } 
 // }
 
 // window.addEventListener('scroll', updateBackgroundColor);
