@@ -18,8 +18,7 @@
          <li><a href="#home">Домівка</a></li>
          <li><a href="#about">Про нас</a></li>
          <li><a href="#team">Команда</a></li>
-         <li><a href="#portfolio">Portfolio</a></li>
-         <li><a href="#contact">Contact</a></li>
+         <li><a href="#contact">Зв'яжіться з нами</a></li>
       </ul>
    </header>
    <!-- Home -->
@@ -79,89 +78,78 @@
 
    <section class="before-after">
       <h1>Результат До / Після</h1>
-      <div class="container">
-        <div class="image-container">
-          <img
-            class="image-before slider-image"
-           src="after-img.jpg"
-            alt="color photo"
-          />
-          <img
-            class="image-after slider-image"
-            src="before-img.jpg"
-            alt="black and white"
-          />
-        </div>
-        <input
-          type="range"
-          min="0"
-          max="100"
-          value="50"
-          aria-label="Percentage of before photo shown"
-          class="slider"
-        />
-        <div class="slider-line" aria-hidden="true"></div>
-        <div class="slider-button" aria-hidden="true">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-          >
-            <rect width="256" height="256" fill="none"></rect>
-            <line
-              x1="128"
-              y1="40"
-              x2="128"
-              y2="216"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></line>
-            <line
-              x1="96"
-              y1="128"
-              x2="16"
-              y2="128"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></line>
-            <polyline
-              points="48 160 16 128 48 96"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></polyline>
-            <line
-              x1="160"
-              y1="128"
-              x2="240"
-              y2="128"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></line>
-            <polyline
-              points="208 96 240 128 208 160"
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="16"
-            ></polyline>
-          </svg>
-        </div>
+      <div class='container'>
+         <div class='img background-img'></div>
+         <div class='img foreground-img'></div>
+         <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+       </div>    
+    </section>
+
+    <!--Team section-->
+
+    <section class="team" id="team">
+      <div class="heading">
+         <h1>Наша команда</h1>
       </div>
+      <div class="team-container">
+         <div class="box">
+            <div class="box-img">
+               <img src="assets/member1.webp" alt="">
+            </div>
+            <div class="content">
+               <a href="#"><i class='bx bx-link'></i></a>
+               <h3>Member 1</h3>
+            </div>
+         </div>
+         <div class="box">
+            <div class="box-img">
+               <img src="assets/member2.webp" alt="">
+            </div>
+            <div class="content">
+               <a href="#"><i class='bx bx-link'></i></a>
+               <h3>Member 2</h3>
+            </div>
+         </div>
+         <div class="box">
+            <div class="box-img">
+               <img src="assets/member3.webp" alt="">
+            </div>
+            <div class="content">
+               <a href="#"><i class='bx bx-link'></i></a>
+               <h3>Member 3</h3>
+            </div>
+         </div>
+         <div class="box">
+            <div class="box-img">
+               <img src="assets/member4.webp" alt="">
+            </div>
+            <div class="content">
+               <a href="#"><i class='bx bx-link'></i></a>
+               <h3>Member 4</h3>
+            </div>
+         </div>
+         <div class="box">
+            <div class="box-img">
+               <img src="assets/member5.webp" alt="">
+            </div>
+            <div class="content">
+               <a href="#"><i class='bx bx-link'></i></a>
+               <h3>Member 5</h3>
+            </div>
+         </div>
+         <div class="box">
+            <div class="box-img">
+               <img src="assets/member6.webp" alt="">
+            </div>
+            <div class="content">
+               <a href="#"><i class='bx bx-link'></i></a>
+               <h3>Member 6</h3>
+            </div>
+         </div>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      
     </section>
    <script src="main.js"></script>
 </body>

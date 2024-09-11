@@ -44,12 +44,13 @@ const sr = ScrollReveal ({
 
 // updateBackgroundColor();
 
-const container = document.querySelector('.container');
+const foregroundImg = document.querySelector('.foreground-img');
 document.querySelector('.slider').addEventListener('input', (e) => {
-  container.style.setProperty('--position', `${e.target.value}%`);
+  foregroundImg.style.setProperty('width', `${e.target.value}%`);
 })
 
 sr.reveal('.home-text',{delay:200, origin:'top'})
 sr.reveal('.contact-icons',{delay:200, origin:'top'})
 sr.reveal('.about-text',{delay:200, origin:'left'})
 sr.reveal('.img-about',{delay:200, origin:'right'})
+sr.reveal('.container',{delay:200, origin:'top'})
