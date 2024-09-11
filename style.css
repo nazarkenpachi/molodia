@@ -28,7 +28,7 @@ section{
 header
 {
    padding: 0 10%;
-   position: absolute;
+   position: fixed;
    top: 0;
    left: 0;
    width: 100%;
@@ -36,6 +36,8 @@ header
    justify-content: space-between;
    align-items: center;
    z-index: 1000; 
+   transition: 0.6s;
+   
 }
 header ul
 {
@@ -70,6 +72,12 @@ header a img
 {
    height: 65px; 
 }
+
+header.sticky {
+   background-color: #ffc300;
+   /* background-image: radial-gradient(circle, #fde8a3, #fddf84, #fdd764, #fecd41, #ffc300); */
+}
+
 #menu-icon{
    font-size: 24px;
    cursor: pointer;
@@ -482,4 +490,53 @@ body{
 .team-container .box:hover .content{
    top: 0;
    transition: 0.2s;
+}
+
+.contact-form{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 2rem;
+   margin-bottom: 5%;
+}
+.contact-form form{
+   position: relative;
+   width: 400px;
+}
+form input, form textarea{
+   width: 100%;
+   padding: 14px;
+   border: none;
+   outline: none;
+   background: rgb(252, 195, 0.8);
+   margin-bottom:  0.5rem;
+   border-radius: 4px;
+   color: black;
+}
+
+form input::placeholder,
+form textarea::placeholder{
+   color: black;
+}
+textarea {
+   resize: none;
+   height: 200px;
+}
+
+form .send-btn {
+   max-width: 130px;
+   font-size: 1rem;
+   font-weight: 500;
+   text-transform: uppercase;
+}
+
+form .send-btn:hover{
+   background-color: #9BB235;
+}
+
+.copyright{
+   padding: 20px;
+   text-align: center;
+   color: black;
+   background: #fcc300;
 }
