@@ -635,3 +635,38 @@ form .send-btn:hover{
       height: 400px;
    }
 }
+
+@media (max-width: 350px) {
+   .home-text h1{
+      font-size: 2rem;
+   }
+   .home-text h2{
+      font-size: 1rem;
+   }
+   .btn{
+      padding: 0.6rem 1.7rem;
+   }
+   .about h1 {
+      font-size: 2rem;
+   }
+   .about-text p {
+      font-size: 0.6rem;
+   }
+   .heading h1{
+      font-size: 2rem;
+   }
+   .before-after h1{
+      font-size: 2rem;
+      margin-top: 4rem;
+   }
+   .container {
+      height: 200px;
+      width: 250px;
+   }
+   .img {
+      background-size: 2000px 100%;
+   }
+   .slider::-webkit-slider-thumb{
+      height: 200px;
+   }
+}
