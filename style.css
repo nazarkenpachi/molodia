@@ -352,6 +352,7 @@ body{
    place-items: center;
    min-height: 100vh;
    background-color: #ffc300;
+   overflow: hidden;
  }
 
 .before-after h1{
@@ -360,12 +361,14 @@ body{
 }
 
  .container {
+   overflow: hidden;
    position: relative;
    width: 900px;
    height: 600px;
    border: 2px solid black;
  }
  .img {
+   overflow: hidden;
    position: absolute;
    top: 0;
    left: 0;
@@ -607,7 +610,7 @@ form .send-btn:hover{
       border: none;
    }
 }
-@media (max-width:634px){
+@media (max-width:705px){
    .home h1 {
       font-size: 2.8rem;
    }
@@ -636,7 +639,21 @@ form .send-btn:hover{
    }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 565px) {
+   .container {
+      height: 300px;
+      width: 350px;
+   }
+   .img {
+      background-size: 350px 100%;
+   }
+   .slider::-webkit-slider-thumb{
+      height: 300px;
+   }
+}
+
+@media (max-width: 420px) {
+   
    .home-text h1{
       font-size: 2rem;
    }
@@ -652,19 +669,36 @@ form .send-btn:hover{
    .about-text p {
       font-size: 0.6rem;
    }
+   
+  .about-content {
+      display: block;
+      justify-content: space-between;
+  }
+
+  .about-text {
+      max-width: 100%;
+      position: static;
+      margin-bottom: 2rem;
+  } 
+
+  .img-about img {
+      margin-bottom: 2rem;
+  } 
+
    .heading h1{
       font-size: 2rem;
    }
    .before-after h1{
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-top: 4rem;
    }
    .container {
       height: 200px;
       width: 250px;
+      margin-bottom: 4rem;
    }
    .img {
-      background-size: 2000px 100%;
+      background-size: 250px 100%;
    }
    .slider::-webkit-slider-thumb{
       height: 200px;
