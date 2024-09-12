@@ -61,8 +61,17 @@ window.addEventListener("scroll", function(){
    }
    lastScrollTop = scrollTop;
    header.classList.toggle("sticky", window.scrollY > 0);
+   menu.classList.remove('bx-x');
+   navbar.classList.remove('active');
 })
 
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+   menu.classList.toggle('bx-x');
+   navbar.classList.toggle('active');
+}
 
 sr.reveal('.home-text',{delay:200, origin:'top'})
 sr.reveal('.contact-icons',{delay:200, origin:'top'})

@@ -37,33 +37,26 @@ header
    align-items: center;
    z-index: 1000; 
    transition: 0.6s;
-   
 }
-header ul
+.navbar
 {
    display: flex;
-   justify-content: center;
-   align-items: center;
 }
-
+.navbar a {
+   font-size: 1rem;
+   font-weight: 500;
+   color: black;
+   text-decoration: none;
+   padding: 8px 15px;
+   transition: all 0.15s ease;
+   border-radius: 10px;
+}
 header ul li
 {
    list-style: none;
    margin-left: 20px;
 }
-
-header ul li a
-{
-   font-size: 1rem;
-   text-decoration: none;
-   padding: 8px 15px;
-   transition: all 0.15s ease;
-   border-radius: 10px;
-   color: black;
-   font-weight: 500;
-}
-
-header ul li a:hover{
+.navbar a:hover{
    background-color: black;
    color: white;
 }
@@ -279,7 +272,7 @@ body{
    min-height: 100vh;
  }
 
- .about::before{
+ /* .about::before{
    margin-top: 0;
    content: '';
    position: absolute;
@@ -288,7 +281,7 @@ body{
    top: -12%;
    height: 50px;
    background-color: black;
- }
+ } */
 
  .about h1{
    width: 100%;
@@ -539,4 +532,106 @@ form .send-btn:hover{
    text-align: center;
    color: black;
    background: #fcc300;
+}
+
+@media (max-width: 991px) {
+   header {
+      padding: 4px 2%;
+   }
+   .container {
+      height: 500px;
+      width: 600px;
+   }
+   .img {
+      background-size: 500px 100%;
+   }
+   .slider::-webkit-slider-thumb{
+      height: 500px;
+   }
+
+}
+@media (max-width: 881px){
+   .home-text h1{
+      font-size: 3rem;
+   }
+   .home-text h2 {
+      font-size: 1.2rem;
+   }
+
+   .home-text p {
+      font-size: 0.944rem;
+   }
+   .about h1{
+      font-size: 3rem;
+   }
+   .about-text h2{
+      font-size: 1.2rem;
+   }
+   .about-text p{
+      font-size: 0.944rem;
+   }
+}
+@media (max-width: 768px){
+   #menu-icon{
+      display: initial;
+   }
+   header{
+      padding: 4px 4%;
+      background-color: #ffc300;
+   }
+   header .navbar{
+      position: absolute;
+      top: -500px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      background: #ffc300;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+      transition: 0.2s ease;
+      text-align: left;
+   }
+   .navbar.active {
+      top: 100%;
+   }
+   .navbar a{
+      padding: 1rem;
+      border-left: 2px solid black;
+      margin: 1rem;
+      display: block;
+      border-radius: 0;
+   }
+   .navbar a:hover{
+      color:#fff;
+      background: #000;
+      border: none;
+   }
+}
+@media (max-width:634px){
+   .home h1 {
+      font-size: 2.8rem;
+   }
+   .about h1{
+      font-size: 2.8rem;
+   }
+   .about-text p {
+      font-size: 0.88rem;
+   }
+   .heading h1{
+      font-size: 2.8rem;
+   }
+   .before-after h1{
+      font-size: 2.4rem;
+      margin-top: 4rem;
+   }
+   .container {
+      height: 400px;
+      width: 450px;
+   }
+   .img {
+      background-size: 450px 100%;
+   }
+   .slider::-webkit-slider-thumb{
+      height: 400px;
+   }
 }
