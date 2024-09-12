@@ -352,7 +352,6 @@ body{
    place-items: center;
    min-height: 100vh;
    background-color: #ffc300;
-   overflow: hidden;
  }
 
 .before-after h1{
@@ -361,14 +360,12 @@ body{
 }
 
  .container {
-   overflow: hidden;
    position: relative;
    width: 900px;
    height: 600px;
    border: 2px solid black;
  }
  .img {
-   overflow: hidden;
    position: absolute;
    top: 0;
    left: 0;
@@ -640,6 +637,16 @@ form .send-btn:hover{
 }
 
 @media (max-width: 565px) {
+   .about-content {
+      display: block;
+      justify-content: space-between;
+  }
+
+  .about-text {
+      max-width: 100%;
+      position: static;
+      margin-bottom: 2rem;
+  } 
    .container {
       height: 300px;
       width: 350px;
@@ -670,17 +677,6 @@ form .send-btn:hover{
       font-size: 0.6rem;
    }
    
-  .about-content {
-      display: block;
-      justify-content: space-between;
-  }
-
-  .about-text {
-      max-width: 100%;
-      position: static;
-      margin-bottom: 2rem;
-  } 
-
   .img-about img {
       margin-bottom: 2rem;
   } 
