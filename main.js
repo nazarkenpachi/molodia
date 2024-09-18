@@ -17,32 +17,6 @@ const sr = ScrollReveal ({
    reset: true
 })
 
-// const backgroundColors = [
-//    'radial-gradient(circle, #ffebaa, #ffe28a, #ffd868, #ffce43, #ffc300)', 
-//    '#fff',
-//    'linear-gradient(to left top, #ffffff, #cacaca, #979797, #676767, #3b3b3b)'
-//    ];
-// let currentColorIndex = 0;
-
-// function updateBackgroundColor() {
-//    const scrollPosition = window.scrollY;
-//    const windowHeight = window.innerHeight;
-//    const bodyHeight = document.body.offsetHeight;
-   
-//    const scrollPercentage = scrollPosition / (bodyHeight - windowHeight);
-//    const colorIndex = Math.floor(scrollPercentage * backgroundColors.length);
-
-//    if (backgroundColors[colorIndex] === '#fff'){
-//       document.body.style.backgroundColor = backgroundColors[colorIndex];
-//    }
-//    else {
-//       document.body.style.background = backgroundColors[colorIndex];
-//    } 
-// }
-
-// window.addEventListener('scroll', updateBackgroundColor);
-
-// updateBackgroundColor();
 
 const foregroundImg = document.querySelector('.foreground-img');
 document.querySelector('.slider').addEventListener('input', (e) => {
@@ -72,6 +46,34 @@ menu.onclick = () => {
    menu.classList.toggle('bx-x');
    navbar.classList.toggle('active');
 }
+
+let trigger = document.querySelector('#span-show_info');
+let infoWrapper = document.querySelector('.info-wrapper');
+let close = document.querySelector('#close_record-icon')
+const body = document.body;
+
+
+function openFullscreen() {
+   infoWrapper.style.display = 'block';
+   infoWrapper.classList.add('enable-blur');
+   body.classList.add('no-scroll');
+}
+
+function closeFullscreen() {
+   infoWrapper.style.display = 'none';
+   infoWrapper.classList.remove('enable-blur');
+   body.classList.remove('no-scroll');
+}
+
+trigger.addEventListener('click', openFullscreen);
+
+close.addEventListener('click', closeFullscreen);
+
+infoWrapper.addEventListener('click', (e) => {
+   if (e.target === infoWrapper){
+      closeFullscreen();
+   }
+})
 
 sr.reveal('.home-text',{delay:200, origin:'top'})
 sr.reveal('.contact-icons',{delay:200, origin:'top'})
