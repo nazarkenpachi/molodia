@@ -11,12 +11,11 @@ for(let i = 0; i< gridSize; i++){
 }
 
 const sr = ScrollReveal ({
-   distance: '60px',
+   distance: '30px',
    duration: 2500,
    delay: 400,
-   reset: true
+   reset: false
 })
-
 
 const foregroundImg = document.querySelector('.foreground-img');
 document.querySelector('.slider').addEventListener('input', (e) => {
@@ -47,36 +46,37 @@ menu.onclick = () => {
    navbar.classList.toggle('active');
 }
 
-let trigger = document.querySelector('#span-show_info');
-let infoWrapper = document.querySelector('.info-wrapper');
-let close = document.querySelector('#close_record-icon')
-const body = document.body;
+function createModalHandlers(triggerId, modalId, closeId) {
+   const trigger = document.querySelector(triggerId);
+   const modal = document.querySelector(modalId);
+   const close = document.querySelector(closeId);
+   const body = document.body;
 
-
-function openFullscreen() {
-   infoWrapper.style.display = 'block';
-   infoWrapper.classList.add('enable-blur');
-   body.classList.add('no-scroll');
-}
-
-function closeFullscreen() {
-   infoWrapper.style.display = 'none';
-   infoWrapper.classList.remove('enable-blur');
-   body.classList.remove('no-scroll');
-}
-
-trigger.addEventListener('click', openFullscreen);
-
-close.addEventListener('click', closeFullscreen);
-
-infoWrapper.addEventListener('click', (e) => {
-   if (e.target === infoWrapper){
-      closeFullscreen();
+   function openModal() {
+       modal.style.display = 'block';
+       modal.classList.add('enable-blur');
+       body.classList.add('no-scroll');
    }
-})
+
+   function closeModal() {
+       modal.style.display = 'none';
+       modal.classList.remove('enable-blur');
+       body.classList.remove('no-scroll');
+   }
+
+   trigger.addEventListener('click', openModal);
+   close.addEventListener('click', closeModal);
+   modal.addEventListener('click', (e) => {
+       if (e.target === modal) {
+           closeModal();
+       }
+   });
+}
+
+createModalHandlers('#show-info-about', '.info-wrapper', '#close_about-record-icon');
+createModalHandlers('#show-info-team', '.info-wrapper-team', '#close_record-team-icon');
 
 sr.reveal('.home-text',{delay:200, origin:'top'})
 sr.reveal('.contact-icons',{delay:200, origin:'top'})
 sr.reveal('.about-text',{delay:200, origin:'left'})
 sr.reveal('.img-about',{delay:200, origin:'right'})
-sr.reveal('.container',{delay:200, origin:'top'})
